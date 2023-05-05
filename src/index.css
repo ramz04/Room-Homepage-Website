@@ -94,25 +94,55 @@ a {
 }
 
 .hero--discover p {
+    margin-top: 0.8rem;
+    letter-spacing: 1px;
+    font-size: 14px;
+    line-height: 1.2rem;
+    color: var(--Dark-Gray);
 
 }
 
 .hero--discover h1 {
+    font-size: 35px;
+    letter-spacing: 0.5px;
+    line-height: 2rem;
 
 }
 
 .hero--discover div {
+    margin-top:2rem;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    font-weight: 700;
+    display: flex;
+    font-size: 15px;
+    column-gap: 20px;
+    align-items: center;
 
+
+}
+.hero--discover div img{
+    height: 12px;
 }
 
 .about{
 
 }
 
-.about--text {
-
+.about--text{
+    padding:30px 25px;
 }
 
-.about--img{
+.about--text h3{
+    font-size: 16px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
 
+.about--text p {
+    margin-top: 0.8rem;
+    letter-spacing: 1px;
+    font-size: 14px;
+    line-height: 1.2rem;
+    color: var(--Dark-Gray);
 }
