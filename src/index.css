@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ******************** */
+/* VARIABLES */
+/* ******************** */
+:root {
+    --Dark-Gray: hsl(0, 0%, 63%);
+    --Black: hsl(0, 0%, 0%);
+    --White: hsl(0, 0%, 100%);
+    --Very-Dark-Gray: hsl(0, 0%, 27%);
+    --Transition: 0.05s all;
+}
+
+/* ******************** */
+/* RESET */
+/* ******************** */
+*,
+*::after,
+*::before {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    font-size: 12px;
+    font-family: 'League Spartan','sans serif';
+}
+
+img,
+picture,
+canvas,
+video,
+svg {
+    block-size: auto;
+    max-inline-size: 100%;
+}
+
+
+ol,
+ul {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+  }
