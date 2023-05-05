@@ -73,3 +73,46 @@ a {
     text-decoration: none;
     color: inherit;
   }
+
+.hero{
+
+}
+
+.hero--main-page{
+
+}
+
+.hero--main-page--img{
+    width: 100%;
+    position: relative;
+    object-fit: cover;
+}
+
+.hero--discover{
+    padding: 30px 25px;
+
+}
+
+.hero--discover p {
+
+}
+
+.hero--discover h1 {
+
+}
+
+.hero--discover div {
+
+}
+
+.about{
+
+}
+
+.about--text {
+
+}
+
+.about--img{
+
+}
