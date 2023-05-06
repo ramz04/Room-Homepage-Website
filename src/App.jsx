@@ -57,13 +57,15 @@ function App() {
               </div>
               <img src={logo} alt='Logo' className='' />
             </div>
-            <div aria-checked={!drawer} className="absolute top-0 md:hidden right-0  left-0 transition-transform duration-500 z-50 ease-in-out h-[22%] bg-white aria-checked:-translate-y-[100%] flex flex-col gap-y-7">
-              <ul className='flex w-full justify-end pt-[25px] px-6 text-Dark font-bold text-lg gap-6'>
-                  <li className='nav--items'><a href="#">home</a></li>
-                  <li className='nav--items'><a href="#">shop</a></li>
-                  <li className='nav--items'><a href="#">about</a></li>
-                  <li className='nav--items'><a href="#">contact</a></li>
-              </ul>
+            <div aria-checked={!drawer} className="fixed aria-checked:-translate-y-[100%] inset-0 bg-black bg-opacity-50 ease-in-out transition-transform duration-400">
+              <div aria-checked={!drawer} className="absolute top-0 md:hidden right-0  left-0 transition-transform duration-500 z-50 ease-in-out bg-white aria-checked:-translate-y-[100%] flex flex-col gap-y-7">
+                <ul className='flex w-full justify-end py-[25px] px-6 text-Dark font-bold text-lg gap-6'>
+                    <li className='nav--items'><a href="#">home</a></li>
+                    <li className='nav--items'><a href="#">shop</a></li>
+                    <li className='nav--items'><a href="#">about</a></li>
+                    <li className='nav--items'><a href="#">contact</a></li>
+                </ul>
+              </div>
             </div>
 
           </div>
