@@ -81,6 +81,31 @@ a {
     position: relative;
 }
 
+.hero--slide{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+hero--slide button{
+    display: flex;
+    align-items: center;
+    height: auto;
+}
+
+.hero--slide-item{
+    padding: 17px 22px;
+    background-color: var(--Black);
+}
+
+.hero--slide-item:hover{
+    background-color: var(--Very-Dark-Gray);
+    transition: var(--Transition);
+}
+
 .hero--nav{
     position:absolute;
     top: 20px;

@@ -1,34 +1,49 @@
 import img_mobile1 from './assets/images/mobile-image-hero-1.jpg'
-// import img_mobile2 from './assets/images/mobile-image-hero-2.jpg'
-// import img_mobile3 from './assets/images/mobile-image-hero-3.jpg'
+import img_mobile2 from './assets/images/mobile-image-hero-2.jpg'
+import img_mobile3 from './assets/images/mobile-image-hero-3.jpg'
 import img_desktop1 from './assets/images/desktop-image-hero-1.jpg'
-// import img_desktop2 from './assets/images/desktop-image-hero-2.jpg'
-// import img_desktop3 from './assets/images/desktop-image-hero-3.jpg'
+import img_desktop2 from './assets/images/desktop-image-hero-2.jpg'
+import img_desktop3 from './assets/images/desktop-image-hero-3.jpg'
 import dark from './assets/images/image-about-dark.jpg'
-// import data from './data.json'
+import data from './data.json'
 import {useState} from 'react'
 import logo from './assets/images/logo.svg'
 import light from './assets/images/image-about-light.jpg'
 import arrow from './assets/images/icon-arrow.svg'
-// import angle_left from './assets/images/icon-angle-left.svg'
-// import angle_right from './assets/images/icon-angle-right.svg'
+import angle_left from './assets/images/icon-angle-left.svg'
+import angle_right from './assets/images/icon-angle-right.svg'
 
 function App() {
 
-  // const [jsondata, setJsonData] = useState(data)
-  // const [index, setIndex] = useState(0)
+  console.log(data[0].header)
+
+  const [index, setIndex] = useState(0)
   const [drawer, setDrawer] = useState(false)
 
-  // const imgDesktop = [img_desktop1 , img_desktop2, img_desktop3]
-  // const imgMobile = [img_mobile1, img_mobile2, img_mobile3]
+  const imgDesktop = [img_desktop1 , img_desktop2, img_desktop3]
+  const imgMobile = [img_mobile1, img_mobile2, img_mobile3]
+
+  const prevSlide = () => {
+    const currentSlide = index === 0
+    const newSlide = currentSlide ? data.length - 1 : currentSlide - 1
+    setIndex(newSlide)
+  }
+
+  const nextSlide = () => {
+    const currentSlide = index === data.length - 1
+    const newSlide = currentSlide ? 0 : index + 1
+    setIndex(newSlide)
+  }
+
+
 
   return (
     <div className="App">
         <section className="hero">
           <div className="hero--main-page">
             <picture>
-              <source media="(min-width:1024px)" srcSet={img_desktop1}/>
-              <img src={img_mobile1} alt="" className='hero--main-page--img'/>
+              <source media="(min-width:1024px)" srcSet={imgDesktop[index]}/>
+              <img src={imgMobile[index]} alt="" className='hero--main-page--img'/>
             </picture>
             <div className='hero--nav'>
               <div className='hero--nav-menu'>
@@ -67,14 +82,16 @@ function App() {
                 </ul>
               </div>
             </div>
+            <div className='hero--slide'>
+                <button onClick={prevSlide}><img src={angle_left} alt="Slider Left" className='hero--slide-item' /></button>
+                <button onClick={nextSlide}><img src={angle_right} alt="Slider Right" className='hero--slide-item'/></button>
+            </div>
 
           </div>
           <div className="hero--discover">
-            <h1>Discover innovative ways to decorate</h1>
+            <h1>{data[index].header}</h1>
             <p>
-              We provide unmatched quality, comfort, and style for property owners across the country. 
-              Our experts combine form and function in bringing your vision to life. Create a room in your 
-              own style with our collection and make your property a reflection of you and what you love.
+              {data[index].content}
             </p>
             <div>
               Shop now
