@@ -93,9 +93,9 @@ function App() {
             <p>
               {data[index].content}
             </p>
-            <div>
+            <div className='hover:text-gray-500 group'>
               Shop now
-              <img src={arrow} alt='Arrow' />
+              <img src={arrow} alt='Arrow' className='group-hover:invert-[.50] group-hover:ml-[15px] transition-all duration-500 ease-in-out' />
             </div>
 
           </div>
