@@ -114,7 +114,7 @@ function App() {
         </section>
         <section className="about md:basis-2/5">
           <img src={dark} alt='About Dark'className='about--img md:w-full' />
-          <div className='about--text md:p-[4rem]'>
+          <div className='about--text md:px-[4rem]'>
             <h3 className=''>About our furniture</h3>
             <p>
             Our multifunctional collection blends design and function to suit your individual taste.
